@@ -326,6 +326,7 @@
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
+          document.getElementById('slot1').innerHTML = mydata.smoothies[0].name + "<br> $" + mydata.smoothies[0].price;
           document.getElementById('slot2').innerHTML = mydata.smoothies[1].name + "<br> $" + mydata.smoothies[1].price;
         }
       }
