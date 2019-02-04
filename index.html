@@ -1,0 +1,350 @@
+<html>
+  <head>
+    
+    <style>
+      
+      body {
+        margin: 0;
+
+      }
+      
+      
+      .menuContainer {
+        float: right;
+        margin: 20px;
+        margin-right: 30px;
+      }
+      
+      .rightbox {
+        width: 25vw;
+        height: 97vh;
+        margin-left: -.6vw;
+        padding: 13px;
+        float: left;
+        position: fixed;
+        text-shadow: 3px 2px rgba(255,144,107,0.15);
+      }
+      
+      .checkoutlist {
+        width: 25vw;
+        overflow: auto;
+      }
+      
+      .checkoutbtn {
+        width: 25vw;
+        height: 10vh;
+        background-color: #ff6b6b;
+        bottom: 0;
+        position: absolute;
+        margin-left: -.6vw;
+        border-radius: 0px 8px;
+        box-shadow: 5px 5px rgba(255,144,107,0.15);
+      }
+      
+      .menu {
+        width:20vw;
+        height:38vh;
+        background-color: pink;
+        margin: 10px;
+        border-radius: 8px;
+        float: right;
+        position: relative;
+        box-shadow: 5px 5px rgba(255,144,107,0.15);
+      }
+      
+      .img_wrap {
+        width: 20vw;
+        height: 29vh;
+        border-radius: 8px 8px 0px 0px;
+        position: relative;
+      }
+      
+      .menuimg {
+        width: 20vw;
+        height: 29vh;
+        border-radius: 8px 8px 0px 0px;
+      }
+      
+      .imgdesclayer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(226, 127, 173, 0.6);
+        color:#a84171;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .2s, visibility .2s;
+        border-radius: 8px 8px 0px 0px;
+      }
+      
+      .img_wrap:hover .imgdesclayer {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      .imgdesc {
+        transition: .2s;
+        transform: translateY(1em);
+      }
+      
+      .img_wrap:hover .imgdesc {
+        transform: translateY(0);
+      }
+      
+      .dropbtn {
+        width: 20vw;
+        height: 9vh;
+        background-color: #ff6bb5;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        bottom: 0;
+        border-radius: 0px 0px 8px 8px;
+      }
+      
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #ff6bff;
+      }
+      
+      .dropdown {
+        width: 20vw;
+        height: 9vh;
+        position: relative;
+        bottom: 0;
+        border-radius: 0px 0px 8px 8px;
+      }
+      
+      
+      .ddcontent {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        padding: 5px;
+      }
+      
+      .show {display: block;}
+    </style>
+  </head>
+  
+  <body>
+    
+    <div class="rightbox">
+      <h1>Not Jamba Juice</h1>
+      <p>list? i dont know but there will be text here, maybe about the clicky click and current order?</p>
+      <div id="orderList" class="checkoutlist"></div>
+      <div class="checkoutbtn">Replace with button REF TO CHECKOUTPAGE</div>
+    </div>
+    
+    <div class="menuContainer">
+      
+      <div class="menu">
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button onclick="dropMenu1()" class="dropbtn">V</button>
+          <div id="dropdownMenu1" class="ddcontent">
+            <p id="slot1">testing1</p>
+            <input type="number" id="order1" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="menu">
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah wah</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button onclick="dropMenu2()" class="dropbtn">V</button>
+          <div id="dropdownMenu2" class="ddcontent">
+            <p id="slot2">testing2</p>
+            <input type="number" id="order2" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="menu">
+        
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah wah wah</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dropdown">
+          <button onclick="dropMenu3()" class="dropbtn">V</button>
+          <div id="dropdownMenu3" class="ddcontent">
+            <p id="slot3">testing3</p>
+            <input type="number" id="order3" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="menuContainer">
+      <div class="menu">
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah wah wah wah</p>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropMenu4()" class="dropbtn">V</button>
+          <div id="dropdownMenu4" class="ddcontent">
+            <p id="slot4">testing4</p>
+            <input type="number" id="order4" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="menu">
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah wah wah wah wah</p>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropMenu5()" class="dropbtn">V</button>
+          <div id="dropdownMenu5" class="ddcontent">
+            <p id="slot5">testing5</p>
+            <input type="number" id="order5" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="menu">
+        <div class="img_wrap">
+          <div class="menuimg">
+            <div class="imgdesclayer">
+              <p class="imgdesc">Wah wah wah wah wah wah</p>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropMenu6()" class="dropbtn">V</button>
+          <div id="dropdownMenu6" class="ddcontent">
+            <p id="slot6">testing6</p>
+            <input type="number" id="order6" min="1" max="12">
+            <button onclick="orderup()">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script>
+      
+      function dropMenu1() {
+        document.getElementById("dropdownMenu1").classList.toggle("show");
+      }
+      
+      function dropMenu2() {
+        document.getElementById("dropdownMenu2").classList.toggle("show");
+      }
+      
+      function dropMenu3() {
+        document.getElementById("dropdownMenu3").classList.toggle("show");
+      }
+      
+      function dropMenu4() {
+        document.getElementById("dropdownMenu4").classList.toggle("show");
+      }
+      
+      function dropMenu5() {
+        document.getElementById("dropdownMenu5").classList.toggle("show");
+      }
+      
+      function dropMenu6() {
+        document.getElementById("dropdownMenu6").classList.toggle("show");
+      }
+      
+      /*
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("ddcontent");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      */
+      
+      
+      // notes: TO DO: test to see if json files will work (it SHOULD).
+      
+      
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var mydata = JSON.parse(this.responseText);
+          document.getElementById('slot1').innerHTML = mydata.smoothies[1].price;
+        }
+      }
+      xmlhttp.open("Get", "smoothies.json", true);
+      xmlhttp.send();
+      
+      
+      
+      
+      
+      //actual interactive stuff (ddpayment)
+      
+      function orderup() {
+        var n = document.getElementById("order1").value;
+        localStorage.setItem("number", n);
+        location.href="checkout.html";
+      }
+      
+    </script>
+    
+  </body>
+</html>

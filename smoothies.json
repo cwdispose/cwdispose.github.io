@@ -1,0 +1,70 @@
+{
+  "smoothies":[
+    {
+      "name":"Strawberry",
+      "price": 4.41,
+      "desc": "A classic blend of strawberries and bananas, with a splash of apple-strawberry juice."
+    },
+    
+    {
+      "name":"Lots of berries apparently. note: change this",
+      "price": 4.42,
+      "desc": "Strawberries and bananas, with a refreshing scoop of orange sherbet and a mixed berry juice blend."
+    },
+    
+    {
+      "name":"Peach",
+      "price": 4.43,
+      "desc": "A peach smoothie, with bananas, orange sherbet, and a delicious peach juice blend."
+    },
+    
+    {
+      "name":"Mango...Chili?",
+      "price": 4.44,
+      "desc": "A popping mango smoothie with a spicy chili lime blend, sherbet with pineapple, and a passionfruit mango juice blend."
+    },
+    
+    {
+      "name":"Banana Berry",
+      "price": 4.45,
+      "desc": "A banana berry smoothie, including bananas, blueberries, raspberry sherbet, and an apple-strawberry juice blend."
+    },
+    
+    {
+      "name":"Pineapple",
+      "price": 4.46,
+      "desc": "A pineapple smoothie, with strawberries, bananas, and pineapple sherbet."
+    },
+    
+    {
+      "name":"Caribbean Passion",
+      "price": 4.47,
+      "desc":[
+        "Passion Fruit-Mango Juice Blend",
+        "Strawberries",
+        "Orange Sherbet",
+        "Peaches"
+        ]
+    },
+    
+    {
+      "name":"Strawberry Surf(?)",
+      "price": 4.48,
+      "desc":[
+        "Lemonade",
+        "Strawberries",
+        "Lime Sherbet",
+        "Peaches"
+        ]
+    },
+    
+    {
+      "name":"THE REAL MANGO",
+      "price": 4.49,
+      "desc":[
+        "Mangos",
+        "Pineapple Sherbet"
+        ]
+    }
+  ]
+}
