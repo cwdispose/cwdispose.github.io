@@ -327,12 +327,12 @@
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
-          d.getElementById('slot1').innerHTML = mydata.smoothies[0].name "<br> $" mydata.smoothies[0].price;
-          d.getElementById('slot2').innerHTML = mydata.smoothies[1].name "<br> $" mydata.smoothies[1].price;
-          d.getElementById('slot3').innerHTML = mydata.smoothies[2].name "<br> $" mydata.smoothies[2].price;
-          d.getElementById('slot4').innerHTML = mydata.smoothies[3].name "<br> $" mydata.smoothies[3].price;
-          d.getElementById('slot5').innerHTML = mydata.smoothies[4].name "<br> $" mydata.smoothies[4].price;
-          d.getElementById('slot6').innerHTML = mydata.smoothies[5].name "<br> $" mydata.smoothies[5].price;
+          d.getElementById('slot1').innerHTML = mydata.smoothies[0].name, "<br> $" mydata.smoothies[0].price;
+          d.getElementById('slot2').innerHTML = mydata.smoothies[1].name, "<br> $" mydata.smoothies[1].price;
+          d.getElementById('slot3').innerHTML = mydata.smoothies[2].name, "<br> $" mydata.smoothies[2].price;
+          d.getElementById('slot4').innerHTML = mydata.smoothies[3].name, "<br> $" mydata.smoothies[3].price;
+          d.getElementById('slot5').innerHTML = mydata.smoothies[4].name, "<br> $" mydata.smoothies[4].price;
+          d.getElementById('slot6').innerHTML = mydata.smoothies[5].name, "<br> $" mydata.smoothies[5].price;
           d.getElementById('imgdesc1').innerHTML = mydata.smoothies[0].desc;
           d.getElementById('imgdesc2').innerHTML = mydata.smoothies[1].desc;
           d.getElementById('imgdesc3').innerHTML = mydata.smoothies[2].desc;
