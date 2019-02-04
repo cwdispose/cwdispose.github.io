@@ -335,7 +335,6 @@
       xmlhttp.send();
       */
       
-      function startA() {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
@@ -351,8 +350,6 @@
            d.getElementsByClassName('drinkcost')[i].innerHTML = "$" + myData.smoothies[i].price;
            d.getElementsByClassName('amtOrder')[i].value = 0;
           }
-         d.getElementById('taxNow').innerHTML = "Tax rate: " + tax + "%";
-        }
       
       
       //actual interactive stuff (ddpayment)
