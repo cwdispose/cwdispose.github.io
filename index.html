@@ -152,7 +152,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc1"></p>
+              <p class="imgdesc">Wah</p>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc2"></p>
+              <p class="imgdesc">Wah wah</p>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc3"></p>
+              <p class="imgdesc">Wah wah wah</p>
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc4"></p>
+              <p class="imgdesc">Wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc5"></p>
+              <p class="imgdesc">Wah wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc" id="imgdesc6"></p>
+              <p class="imgdesc">Wah wah wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -321,24 +321,12 @@
       
       // notes: TO DO: test to see if json files will work (it SHOULD).
       
-      var d = document
       
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
-          d.getElementById('slot1').innerHTML = mydata.smoothies[0].name;
-          d.getElementById('slot2').innerHTML = mydata.smoothies[1].name;
-          d.getElementById('slot3').innerHTML = mydata.smoothies[2].name, "<br> $" mydata.smoothies[2].price;
-          d.getElementById('slot4').innerHTML = mydata.smoothies[3].name, "<br> $" mydata.smoothies[3].price;
-          d.getElementById('slot5').innerHTML = mydata.smoothies[4].name, "<br> $" mydata.smoothies[4].price;
-          d.getElementById('slot6').innerHTML = mydata.smoothies[5].name, "<br> $" mydata.smoothies[5].price;
-          d.getElementById('imgdesc1').innerHTML = mydata.smoothies[0].desc;
-          d.getElementById('imgdesc2').innerHTML = mydata.smoothies[1].desc;
-          d.getElementById('imgdesc3').innerHTML = mydata.smoothies[2].desc;
-          d.getElementById('imgdesc4').innerHTML = mydata.smoothies[3].desc;
-          d.getElementById('imgdesc5').innerHTML = mydata.smoothies[4].desc;
-          d.getElementById('imgdesc6').innerHTML = mydata.smoothies[5].desc;
+          document.getElementById('slot1').innerHTML = mydata.smoothies[1].name;
         }
       }
       xmlhttp.open("Get", "smoothies.json", true);
