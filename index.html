@@ -31,15 +31,32 @@
         overflow: auto;
       }
       
+      .checkout {
+        width: 25vw;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0px 8px;
+        margin-left: -0.5vw;
+      }
+      
       .checkoutbtn {
         width: 25vw;
         height: 10vh;
         background-color: #ff6b6b;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
         bottom: 0;
-        position: absolute;
-        margin-left: -.6vw;
         border-radius: 0px 8px;
+        position: absolute;
         box-shadow: 5px 5px rgba(255,144,107,0.15);
+      }
+      
+      .checkoutbtn:hover, .checkoutbtn:focus {
+        background-color: #ff4949;
       }
       
       .menu {
@@ -143,9 +160,19 @@
     
     <div class="rightbox">
       <h1>Not Jamba Juice</h1>
-      <p>list? i dont know but there will be text here, maybe about the clicky click and current order?</p>
-      <div id="orderList" class="checkoutlist"></div>
-      <div class="checkoutbtn">Replace with button REF TO CHECKOUTPAGE</div>
+      <div id="orderListbox" class="checkoutlist">
+        <h3>Now Ordering...</h3>
+        <br>
+        <div id="olist">
+          <ul id="ordering"></ul>
+          <br> <br>
+          <p id="totalamt"></p>
+          <button id="clear" onclick="cleardrinks()">CLEAR</button>
+        </div>
+      </div>
+      <div class="checkout">
+        <button id="toCheckout" class="checkoutbtn" onclick="checkout()">CHECKOUT</button>
+      </div>
     </div>
     
     <div class="menuContainer">
