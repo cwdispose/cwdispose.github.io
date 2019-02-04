@@ -5,7 +5,6 @@
       
       body {
         margin: 0;
-
       }
       
       
@@ -152,7 +151,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah</p>
+              <p class="imgdesc" id="desc1">Wah</p>
             </div>
           </div>
         </div>
@@ -174,7 +173,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah</p>
+              <p class="imgdesc" id="desc2">Wah wah</p>
             </div>
           </div>
         </div>
@@ -196,7 +195,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah wah</p>
+              <p class="imgdesc" id="desc3">Wah wah wah</p>
             </div>
           </div>
         </div>
@@ -219,7 +218,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah wah wah</p>
+              <p class="imgdesc" id="desc4">Wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -240,7 +239,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah wah wah wah</p>
+              <p class="imgdesc" id="desc5">Wah wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -261,7 +260,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah wah wah wah wah</p>
+              <p class="imgdesc" id="desc6">Wah wah wah wah wah wah</p>
             </div>
           </div>
         </div>
@@ -328,6 +327,17 @@
           var mydata = JSON.parse(this.responseText);
           document.getElementById('slot1').innerHTML = mydata.smoothies[0].name + "<br> $" + mydata.smoothies[0].price;
           document.getElementById('slot2').innerHTML = mydata.smoothies[1].name + "<br> $" + mydata.smoothies[1].price;
+          document.getElementById('slot3').innerHTML = mydata.smoothies[2].name + "<br> $" + mydata.smoothies[2].price;
+          document.getElementById('slot4').innerHTML = mydata.smoothies[3].name + "<br> $" + mydata.smoothies[3].price;
+          document.getElementById('slot5').innerHTML = mydata.smoothies[4].name + "<br> $" + mydata.smoothies[4].price;
+          document.getElementById('slot6').innerHTML = mydata.smoothies[5].name + "<br> $" + mydata.smoothies[5].price;
+          
+          document.getElementById('desc1').innerHTML = mydata.smoothies[0].desc;
+          document.getElementById('desc2').innerHTML = mydata.smoothies[1].desc;
+          document.getElementById('desc3').innerHTML = mydata.smoothies[2].desc;
+          document.getElementById('desc4').innerHTML = mydata.smoothies[3].desc;
+          document.getElementById('desc5').innerHTML = mydata.smoothies[4].desc;
+          document.getElementById('desc6').innerHTML = mydata.smoothies[5].desc;
         }
       }
       xmlhttp.open("Get", "smoothies.json", true);
