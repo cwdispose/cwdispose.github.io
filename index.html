@@ -134,6 +134,7 @@
       }
       
       .show {display: block;}
+      
     </style>
   </head>
   
@@ -174,7 +175,7 @@
         <div class="img_wrap">
           <div class="menuimg">
             <div class="imgdesclayer">
-              <p class="imgdesc">Wah wah</p>
+              <p class="imgdesc"></p>
             </div>
           </div>
         </div>
@@ -182,7 +183,8 @@
         <div class="dropdown">
           <button onclick="dropMenu2()" class="dropbtn">V</button>
           <div id="dropdownMenu2" class="ddcontent">
-            <p id="slot2">testing2</p>
+            <p class="drinkname"></p>
+            <p class="drinkprice"></p>
             <input type="number" id="order2" min="1" max="12">
             <button onclick="orderup()">Order</button>
           </div>
@@ -322,7 +324,7 @@
       // notes: TO DO: test to see if json files will work (it SHOULD).
       
       
-      var xmlhttp = new XMLHttpRequest();
+      /*var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
@@ -331,9 +333,26 @@
       }
       xmlhttp.open("Get", "smoothies.json", true);
       xmlhttp.send();
+      */
       
-      
-      
+      function startA() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
+          myData = JSON.parse(this.responseText);
+         }
+      };
+       xmlhttp.open("GET", "smoothies.json", true);
+       xmlhttp.send();
+       localStorage.clear();
+         for (i; i < boxes.length; i++) {
+           d.getElementsByClassName('drinkname')[i].innerHTML = myData.smoothies[i].name;
+           d.getElementsByClassName('imgdesc')[i].innerHTML = myData.smoothies[i].desc;
+           d.getElementsByClassName('drinkcost')[i].innerHTML = "$" + myData.smoothies[i].price;
+           d.getElementsByClassName('amtOrder')[i].value = 0;
+          }
+         d.getElementById('taxNow').innerHTML = "Tax rate: " + tax + "%";
+        }
       
       
       //actual interactive stuff (ddpayment)
